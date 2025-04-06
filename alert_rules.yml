@@ -1,0 +1,9 @@
+groups:
+  - name: node_usage_memory_a
+    rules:
+      - alert: node_usage_memory_alert
+        expr: node_usage_memory_rule > 40
+        annotations:
+          summary: " memory usage in {{ $labels.instance }}"
+          description: "memory usage is {{ $value }}"
+

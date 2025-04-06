@@ -1,0 +1,8 @@
+
+groups:
+  - name: node_usage_memory_r
+    rules:
+      - record: node_usage_memory_rule
+        expr: (node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100
+        labels:
+          node: node1
